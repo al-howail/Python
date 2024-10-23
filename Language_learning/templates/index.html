@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning App</title>
+</head>
+<body>
+    <h1>Language Learning App</h1>
+    <form action="/add" method="post">
+        <input type="text" name="word" placeholder="New word">
+        <input type="text" name="translation" placeholder="Translation">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {% for item in words %}
+            <li>{{ item.word }} - {{ item.translation }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
